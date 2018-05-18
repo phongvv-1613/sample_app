@@ -1,9 +1,6 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
-/* mixins, variables, etc. */
-
-$gray-medium-light: #eaeaea;
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'color';
 
 @mixin box_sizing {
   box-sizing:         border-box;
@@ -176,4 +173,18 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.checkbox {
+  margin-bottom: 10px;
+  margin-top: -10px;
+  span {
+    font-weight: normal;
+    margin-left: 20px;
+  }
+}
+
+#session_remember_me {
+  margin-left: 0;
+  width: auto;
 }
