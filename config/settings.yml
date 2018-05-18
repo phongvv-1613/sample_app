@@ -5,6 +5,12 @@ user:
     max_length: 255
   password:
     min_length: 6
+  per_page: 8
 
+users:
+  index:
+    size: 50
+user_helper:
+  size: 80
 sessions:
-  sessions: 1
+  sessions: "1"

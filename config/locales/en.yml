@@ -8,6 +8,25 @@ en:
     create:
       success: "Welcome to the Sample App!"
 
+    edit:
+      title: "Edit user"
+      update: "Update your profile"
+      confirmation: "Confirmation"
+      submit: "Save changes"
+      danger: "Please log in."
+
+    update:
+      success: "Profile updated"
+    index:
+      title: "All users"
+
+    destroy:
+      success: "User deleted"
+      danger: "Dont delete"
+    user:
+      confirm: "You sure"
+      delete: "delete"
+
   static_pages:
     about:
       about: "About"
@@ -74,7 +93,7 @@ en:
         help: "Help"
         login: " Login"
         logout: "Logout"
-        user: "Users"
+        users: "Users"
         account: "Account"
         profile: "Profile"
         settings: "Settings"
