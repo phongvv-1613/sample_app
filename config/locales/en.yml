@@ -7,6 +7,26 @@ en:
 
     create:
       success: "Welcome to the Sample App!"
+      info: "Please check your email to activate your account."
+
+    edit:
+      title: "Edit user"
+      update: "Update your profile"
+      confirmation: "Confirmation"
+      submit: "Save changes"
+      danger: "Please log in."
+
+    update:
+      success: "Profile updated"
+    index:
+      title: "All users"
+
+    destroy:
+      success: "User deleted"
+      danger: "Dont delete"
+    user:
+      confirm: "You sure"
+      delete: "delete"
 
   static_pages:
     about:
@@ -57,7 +77,6 @@ en:
       warning: "Account not activated.Check your email for the activation link."
       danger: "Invalid email/password combination"
 
-
   layouts:
       footer:
         the: "The "
@@ -74,7 +93,19 @@ en:
         help: "Help"
         login: " Login"
         logout: "Logout"
-        user: "Users"
+        users: "Users"
         account: "Account"
         profile: "Profile"
         settings: "Settings"
+
+  user_mailer:
+    account_activation:
+      subject: "Account activation"
+      title: "Sample App"
+      hi: "Hi "
+      welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate: "Activate"
+
+  account_activations:
+    success: "Account activated!"
+    danger: "Invalid activation link"
