@@ -33,9 +33,14 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :test
+<<<<<<< 0079611ff0eae1dd3eaeada8c346fdf441607103
   host = "localhost:3000"
   config.action_mailer.default_url_options = { host: host, protocol: "http" }
 
+=======
+  host = 'localhost:3000'
+  config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+>>>>>>> Chapter 12
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
