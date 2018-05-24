@@ -1,5 +1,9 @@
 class User < ApplicationRecord
+<<<<<<< 0079611ff0eae1dd3eaeada8c346fdf441607103
   attr_accessor :remember_token, :activation_token
+=======
+  attr_accessor :remember_token, :activation_token, :reset_token
+>>>>>>> Chapter 12
 
   scope :load_data, ->{select("id, name, email").order created_at: :desc}
 
@@ -30,7 +34,11 @@ class User < ApplicationRecord
   end
 
   def authenticated? attribute, token
+<<<<<<< 0079611ff0eae1dd3eaeada8c346fdf441607103
     digest = send "#{attribute}_digest"
+=======
+    digest = send("#{attribute}_digest")
+>>>>>>> Chapter 12
     return false if digest.nil?
     BCrypt::Password.new(digest).is_password?(token)
   end
@@ -47,6 +55,23 @@ class User < ApplicationRecord
     UserMailer.account_activation(self).deliver_now
   end
 
+<<<<<<< 0079611ff0eae1dd3eaeada8c346fdf441607103
+=======
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_attributes reset_digest: User.digest(reset_token),
+      reset_send_at: Time.zone.now
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
+
+  def password_reset_expired?
+    reset_send_at < 2.hours.ago
+  end
+
+>>>>>>> Chapter 12
   private
 
   def downcase_email

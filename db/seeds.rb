@@ -12,7 +12,11 @@ User.create!(name:  "Vu Phong",
   password = "password"
   User.create!(name:  name,
                email: email,
+<<<<<<< 0079611ff0eae1dd3eaeada8c346fdf441607103
                password: password,
+=======
+               password:              password,
+>>>>>>> Chapter 12
                password_confirmation: password,
                activated: true,
                activated_at: Time.zone.now)

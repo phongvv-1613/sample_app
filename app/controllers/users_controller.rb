@@ -2,7 +2,11 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
+<<<<<<< 0079611ff0eae1dd3eaeada8c346fdf441607103
   before_action :find_user, only: [:index, :show]
+=======
+  before_action :find_user, except: [:index, :new]
+>>>>>>> Chapter 12
 
   def index
     @users = User.load_data.page(params[:page]).per(Settings.user.per_page)
@@ -53,8 +57,7 @@ class UsersController < ApplicationController
   def find_user
     @user = User.find_by id: params[:id]
     return if @user
-    flash[:danger] = t ".danger"
-    redirect_to users_path
+    flash.now[:danger] = t ".danger"
   end
 
   def logged_in_user
