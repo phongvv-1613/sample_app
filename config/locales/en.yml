@@ -7,6 +7,7 @@ en:
 
     create:
       success: "Welcome to the Sample App!"
+      info: "Please check your email to activate your account."
 
     edit:
       title: "Edit user"
@@ -76,7 +77,6 @@ en:
       warning: "Account not activated.Check your email for the activation link."
       danger: "Invalid email/password combination"
 
-
   layouts:
       footer:
         the: "The "
@@ -97,3 +97,15 @@ en:
         account: "Account"
         profile: "Profile"
         settings: "Settings"
+
+  user_mailer:
+    account_activation:
+      subject: "Account activation"
+      title: "Sample App"
+      hi: "Hi "
+      welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate: "Activate"
+
+  account_activations:
+    success: "Account activated!"
+    danger: "Invalid activation link"
