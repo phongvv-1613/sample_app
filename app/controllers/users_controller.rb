@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   def index
     @users = User.load_data.page(params[:page]).per Settings.user.per_page
   end
+
   def new
     @user = User.new
   end

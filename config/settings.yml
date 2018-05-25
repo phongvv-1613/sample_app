@@ -20,3 +20,5 @@ sessions:
 
 micropost:
   max_length: 140
+  picture_size: 5
+

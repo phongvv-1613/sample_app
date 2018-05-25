@@ -112,7 +112,6 @@ en:
     stats:
       following: "following"
       follower: "forllowers"
-
   sessions:
     new:
       login: "Login"
