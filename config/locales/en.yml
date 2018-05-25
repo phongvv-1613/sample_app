@@ -24,6 +24,23 @@ en:
     destroy:
       success: "User deleted"
       danger: "Dont delete"
+
+    follow:
+      follow: "Follow"
+
+    unfollow:
+      unfollow: "Unfollow"
+
+    show_follow:
+      view: "view my profile"
+      micro: "Microposts: "
+
+    following:
+      title: "Following"
+
+    followers:
+      title: "Followers"
+
     user:
       confirm: "You sure"
       delete: "delete"
@@ -92,6 +109,9 @@ en:
       submit: "Post"
       alert: "Maximum file size is 5MB. Please choose a smaller file."
 
+    stats:
+      following: "following"
+      follower: "forllowers"
   sessions:
     new:
       login: "Login"
@@ -131,10 +151,6 @@ en:
       hi: "Hi "
       welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
       activate: "Activate"
-      
-  account_activations:
-    success: "Account activated!"
-    danger: "Invalid activation link"
 
     password_reset:
       subject: "Password Reset"

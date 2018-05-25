@@ -6,7 +6,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.load_data.page(params[:page]).per Settings.user.per_page
-
   end
 
   def new
@@ -48,6 +47,18 @@ class UsersController < ApplicationController
       flash[:danger] = t ".danger"
     end
     redirect_to users_url
+  end
+
+  def following
+    @title = t ".title"
+    @users = @user.following.page params[:page]
+    render :show_follow
+  end
+
+  def followers
+    @title = t ".title"
+    @users = @user.followers.page params[:page]
+    render :show_follow
   end
 
   private
