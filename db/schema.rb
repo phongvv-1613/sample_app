@@ -1,3 +1,4 @@
+
 ActiveRecord::Schema.define(version: 2018_05_24_012501) do
 
   create_table "microposts", force: :cascade do |t|
@@ -23,6 +24,7 @@ ActiveRecord::Schema.define(version: 2018_05_24_012501) do
     t.datetime "activated_at"
     t.string "reset_digest"
     t.datetime "reset_send_at"
+
   end
 
 end

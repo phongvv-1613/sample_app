@@ -131,6 +131,10 @@ en:
       hi: "Hi "
       welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
       activate: "Activate"
+      
+  account_activations:
+    success: "Account activated!"
+    danger: "Invalid activation link"
 
     password_reset:
       subject: "Password Reset"
