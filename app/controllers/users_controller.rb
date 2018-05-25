@@ -2,21 +2,22 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
-<<<<<<< 0079611ff0eae1dd3eaeada8c346fdf441607103
-  before_action :find_user, only: [:index, :show]
-=======
   before_action :find_user, except: [:index, :new]
->>>>>>> Chapter 12
 
   def index
-    @users = User.load_data.page(params[:page]).per(Settings.user.per_page)
+    @users = User.load_data.page(params[:page]).per Settings.user.per_page
+
   end
 
   def new
     @user = User.new
   end
 
-  def show; end
+  def show
+    @microposts = @user.microposts.order_by_created_at
+                                  .page(params[:page])
+                                  .per Settings.user.per_page
+  end
 
   def create
     @user = User.new(user_params)

@@ -18,6 +18,9 @@ gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "kaminari"
 gem "bootstrap-kaminari-views"
+gem "carrierwave"
+gem "mini_magick"
+
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
@@ -39,5 +42,6 @@ end
 
 group :production do
   gem "pg"
+  gem "fog"
 end
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

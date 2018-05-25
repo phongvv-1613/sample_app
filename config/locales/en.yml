@@ -8,8 +8,6 @@ en:
     create:
       success: "Welcome to the Sample App!"
       info: "Please check your email to activate your account."
-<<<<<<< 0079611ff0eae1dd3eaeada8c346fdf441607103
-=======
 
     edit:
       title: "Edit user"
@@ -29,7 +27,6 @@ en:
     user:
       confirm: "You sure"
       delete: "delete"
->>>>>>> Chapter 12
 
     edit:
       title: "Edit user"
@@ -83,11 +80,17 @@ en:
       rails: "Ruby on Rails Tutorial"
       h2_end: "sample application"
       signup: "Sign up now!"
+      feed: "Micropost Feed"
 
   shared:
     error_messages:
       error: "The form contains"
       pluralize: "error"
+
+    micropost_form:
+      placeholder: "Compose new micropost..."
+      submit: "Post"
+      alert: "Maximum file size is 5MB. Please choose a smaller file."
 
   sessions:
     new:
@@ -128,12 +131,11 @@ en:
       hi: "Hi "
       welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
       activate: "Activate"
-
-<<<<<<< 0079611ff0eae1dd3eaeada8c346fdf441607103
+      
   account_activations:
     success: "Account activated!"
     danger: "Invalid activation link"
-=======
+
     password_reset:
       subject: "Password Reset"
       title: "Password reset"
@@ -166,4 +168,19 @@ en:
 
     check_expiration:
       danger: "Password reset has expired."
->>>>>>> Chapter 12
+
+  microposts:
+    create:
+      susscess: "Micropost created!"
+    destroy:
+      susscess: "Micropost deleted"
+
+    micropost:
+      post: "Posted "
+      ago: " ago."
+      delete: "Delete"
+      confirm: "You sure?"
+
+  models:
+    micropost:
+      picture_size: "should be less than 5MB"

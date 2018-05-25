@@ -1,8 +1,15 @@
-<<<<<<< 0079611ff0eae1dd3eaeada8c346fdf441607103
-ActiveRecord::Schema.define(version: 2018_05_23_052938) do
-=======
-ActiveRecord::Schema.define(version: 2018_05_23_011647) do
->>>>>>> Chapter 12
+
+ActiveRecord::Schema.define(version: 2018_05_24_012501) do
+
+  create_table "microposts", force: :cascade do |t|
+    t.text "content"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "picture"
+    t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_microposts_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -15,11 +22,9 @@ ActiveRecord::Schema.define(version: 2018_05_23_011647) do
     t.string "activation_digest"
     t.boolean "activated", default: false
     t.datetime "activated_at"
-<<<<<<< 0079611ff0eae1dd3eaeada8c346fdf441607103
-=======
     t.string "reset_digest"
     t.datetime "reset_send_at"
->>>>>>> Chapter 12
+
   end
 
 end

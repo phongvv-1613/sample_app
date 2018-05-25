@@ -14,3 +14,7 @@ user_helper:
   size: 80
 sessions:
   sessions: "1"
+
+micropost:
+  max_length: 140
+  picture_size: 5

@@ -1,14 +1,10 @@
-<% if @user.errors.any? %>
+<% if object.errors.any? %>
   <div id="error_explanation">
     <div class="alert alert-danger">
-<<<<<<< 0079611ff0eae1dd3eaeada8c346fdf441607103
-      <%= t ".error" %> <%= pluralize @user.errors.count, t(".pluralize") %>.
-=======
-      <%= t ".error" %> <%= pluralize(@user.errors.count, t(".pluralize")) %>.
->>>>>>> Chapter 12
+      <%= t ".error" %> <%= pluralize(object.errors.count, t(".pluralize")) %>.
     </div>
     <ul>
-    <% @user.errors.full_messages.each do |msg| %>
+    <% object.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
     </ul>
